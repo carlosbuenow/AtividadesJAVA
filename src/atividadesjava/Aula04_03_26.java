@@ -45,7 +45,7 @@ public class Aula04_03_26 {
             imc = peso / (altura*altura);
             if(imc <= 18.5){
             System.out.println("O seu IMC é: " + imc + " - Abaixo do peso");
-            }else if(imc >= 18.5 && imc <=24.9){
+            }else if(imc >= 18.6 && imc <=24.9){
             System.out.println("O seu IMC é: " + imc + " - Peso normal");
             }else if(imc >=25.0 && imc <=29.9){
             System.out.println("O seu IMC é: " + imc + " - Sobrepeso");
@@ -56,7 +56,6 @@ public class Aula04_03_26 {
             }else if(imc >=40.0){
             System.out.println("O seu IMC é: " + imc + " - Obesidade Grau III");
             }
-            System.out.println("O seu IMC é: " + imc);
             System.out.println("-----------EXERCICIO 4-----------");
             String modelo;
             double eixo,c1,c2,c3,c4;
