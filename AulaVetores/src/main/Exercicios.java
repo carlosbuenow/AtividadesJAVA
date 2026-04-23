@@ -1,6 +1,7 @@
 
 package main;
 
+import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class Exercicios {
@@ -40,5 +41,18 @@ public class Exercicios {
     JOptionPane.showMessageDialog(null, pares);
     }
     
-    
+    public static void usandoRandom(){
+    int [] valor = new int[20];
+    int pares = 0;
+    Random gera = new Random();
+    String mostra = " ";
+    for(int c = 0; c<=19; c++){
+        valor[c] = gera.nextInt(100);
+        mostra = mostra + valor[c] + " | ";
+        if(valor[c] % 2 == 0){
+            pares++;
+        }
+    }
+    JOptionPane.showMessageDialog(null, mostra + "\n Quantidade de números pares: " + pares);
+    }
 }
