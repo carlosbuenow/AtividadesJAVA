@@ -5,10 +5,19 @@ import javax.swing.JOptionPane;
 
 public class Exercicios {
     public static void ex3(){
-    int [] vetor1 = {1,2,3,4,5,6,7,8,9,10};
-    int [] vetor2 = {2,3,4,5,6,7,8,9,10,11};
+    int [] vetor1 = new int[10];
+    int [] vetor2 = new int[10];
     int [] vetor3 = new int[10];
+    int seq = 1;
     String mostra = " ";
+    for(int f=0; f<=9; f++){
+        String x = JOptionPane.showInputDialog(null, "Digite o " + seq + "º " + "valor do 1º Array: ");
+        vetor1[f] = Integer.parseInt(x);
+    }
+    for(int f=0; f<=9; f++){
+        String z = JOptionPane.showInputDialog(null, "Digite o " + seq + "º " + "valor do 2º Array: ");
+        vetor2[f] = Integer.parseInt(z);
+    }
     for(int f = 0; f<=9; f++){
         vetor3[f] = vetor1[f] * vetor2[f];
         mostra = mostra + vetor3[f] + " | ";
@@ -17,10 +26,13 @@ public class Exercicios {
     }
     
     public static void ex4(){
-    int [] vetor1 = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
-    int pares = 0;
+    int [] vetor1 = new int[20];
+    int pares = 0, seq = 1;
     String mostra = " ";
     for(int f=0; f<=19; f++){
+        String x = JOptionPane.showInputDialog(null, "Digite o " + seq + "º " + "valor do Array: ");
+        vetor1[f] = Integer.parseInt(x);
+        seq++;
         if(vetor1[f] % 2 == 0){
             pares++;
         }
