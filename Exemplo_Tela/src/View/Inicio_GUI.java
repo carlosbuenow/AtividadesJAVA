@@ -29,6 +29,7 @@ public class Inicio_GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -37,6 +38,8 @@ public class Inicio_GUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         SAIR_BTN = new javax.swing.JButton();
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -47,7 +50,7 @@ public class Inicio_GUI extends javax.swing.JFrame {
 
         jLabel1.setText("Nome: ");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(20, 70, 34, 20);
+        jLabel1.setBounds(20, 50, 34, 20);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,23 +58,28 @@ public class Inicio_GUI extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(60, 70, 310, 20);
+        jTextField1.setBounds(60, 50, 310, 20);
 
         jLabel2.setText("Endereço:");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(20, 100, 60, 14);
+        jLabel2.setBounds(20, 80, 60, 14);
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(80, 100, 290, 20);
+        jTextField2.setBounds(80, 80, 290, 20);
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Cadastro de Cliente");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(100, 20, 240, 20);
+        jLabel3.setBounds(90, 10, 240, 20);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/programador.gif"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(110, 130, 190, 130);
+        jLabel4.setBounds(110, 110, 190, 130);
 
         SAIR_BTN.setText("Sair");
         SAIR_BTN.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +88,7 @@ public class Inicio_GUI extends javax.swing.JFrame {
             }
         });
         jPanel1.add(SAIR_BTN);
-        SAIR_BTN.setBounds(20, 250, 70, 30);
+        SAIR_BTN.setBounds(290, 250, 70, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,16 +110,12 @@ public class Inicio_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void SAIR_BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SAIR_BTNActionPerformed
-         String x = JOptionPane.showInputDialog(null, "Deseja realmente sair?\n 1 - Sim\n 2 - Não");
-         int op = Integer.parseInt(x);
-         if(op == 1){
-             System.exit(0);
-         }else if (op == 2){
-             JOptionPane.showMessageDialog(null, "Voltando ao sistema");
-         }else{
-             JOptionPane.showMessageDialog(null, "Opção inválida!");
-         }
+         Model.Funcoes_DAO.fechar();
     }//GEN-LAST:event_SAIR_BTNActionPerformed
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        Model.Funcoes_DAO.fechar();
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -150,6 +154,7 @@ public class Inicio_GUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton SAIR_BTN;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
