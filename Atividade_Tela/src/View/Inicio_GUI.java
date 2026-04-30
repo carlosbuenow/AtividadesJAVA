@@ -74,7 +74,7 @@ public class Inicio_GUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 159, 235));
+        jPanel1.setBackground(new java.awt.Color(0, 102, 153));
         jPanel1.setForeground(new java.awt.Color(0, 50, 72));
         jPanel1.setLayout(null);
 
