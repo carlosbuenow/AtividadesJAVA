@@ -57,6 +57,7 @@ public class Funcoes_DAO {
         ALTURA_TXT.setText("");
         PESO_TXT.setText("");
         IDADE_TXT.setText("");
+        PessoaNOME_TXT.setText("");
         PessoaIDADE_TXT.setText("");       
         PessoaALT_TXT.setText("");       
         PessoaPESO_TXT.setText("");     

@@ -1,0 +1,115 @@
+package View;
+
+import javax.swing.JOptionPane;
+
+public class Menu_GUI extends javax.swing.JFrame {
+
+    public Menu_GUI() {
+        initComponents();
+    }
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        CAD_BTN = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        FECHAR_BTN = new javax.swing.JMenuItem();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+
+        jPanel1.setPreferredSize(new java.awt.Dimension(688, 483));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 688, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 462, Short.MAX_VALUE)
+        );
+
+        jMenu1.setText("Cliente");
+
+        CAD_BTN.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        CAD_BTN.setText("Cadastrar");
+        CAD_BTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CAD_BTNActionPerformed(evt);
+            }
+        });
+        jMenu1.add(CAD_BTN);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Produto");
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Programas");
+        jMenuBar1.add(jMenu3);
+
+        jMenu4.setText("Sair");
+
+        FECHAR_BTN.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        FECHAR_BTN.setText("Fechar");
+        FECHAR_BTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FECHAR_BTNActionPerformed(evt);
+            }
+        });
+        jMenu4.add(FECHAR_BTN);
+
+        jMenuBar1.add(jMenu4);
+
+        setJMenuBar(jMenuBar1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
+        );
+
+        setSize(new java.awt.Dimension(688, 483));
+        setLocationRelativeTo(null);
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void CAD_BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CAD_BTNActionPerformed
+        new Cadastrar_GUI().setVisible(true);
+    }//GEN-LAST:event_CAD_BTNActionPerformed
+
+    private void FECHAR_BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FECHAR_BTNActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_FECHAR_BTNActionPerformed
+
+    public static void main(String args[]) {
+       
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Menu_GUI().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem CAD_BTN;
+    private javax.swing.JMenuItem FECHAR_BTN;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
+    // End of variables declaration//GEN-END:variables
+}
